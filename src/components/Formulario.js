@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 
-const Formulario = () => {
-  const [busqueda, setBusqueda] = useState({
-    ciudad: "",
-    pais: "",
-  });
+const Formulario = ({busqueda,setBusqueda,setConsulta}) => {
+ 
 
   const [error, setError] = useState(false);
 
@@ -19,6 +16,7 @@ const Formulario = () => {
       return;
     }
     setError(false);
+    setConsulta(true)
   };
 
   const { ciudad, pais } = busqueda;
